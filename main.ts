@@ -21,12 +21,12 @@ while (true) {
 
   if (distanceToObject <= 10) {
     radio.sendString('Too Close')
-  } else {
+    } else {
     radio.sendString('Pee')
-  }
+    }
 
-radio.onReceivedString(function (receivedString) {
-  basic.clearScreen()
-  basic.showString(receivedString)
+  radio.onReceivedString(function (receivedString) {
+    basic.clearScreen()
+    basic.showString(receivedString)
   })
 }
