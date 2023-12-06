@@ -12,8 +12,7 @@ let distanceToObject: number = 0
 radio.setGroup(76)
 basic.showIcon(IconNames.Happy)
 
-// constantly running
-
+// on a button press, run the code
 input.onButtonPressed(Button.A, function () {
   // finding the distance to the object
   distanceToObject = sonar.ping(
@@ -34,6 +33,7 @@ input.onButtonPressed(Button.A, function () {
 
 // receiving a message
 radio.onReceivedString(function (receivedString) {
-    basic.clearScreen()
-    basic.showString(receivedString)
+  basic.clearScreen()
+  basic.showString(receivedString)
+  basic.showIcon(IconNames.Happy)
 })
