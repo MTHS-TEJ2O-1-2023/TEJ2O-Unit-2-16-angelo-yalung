@@ -29,10 +29,11 @@ input.onButtonPressed(Button.A, function () {
   } else {
     radio.sendString('Pee')
   }
-  // receiving a message
-  radio.onReceivedString(function (receivedString) {
-    basic.clearScreen()
-    basic.showString(receivedString)
-  })
 }
 )
+
+// receiving a message
+radio.onReceivedString(function (receivedString) {
+    basic.clearScreen()
+    basic.showString(receivedString)
+})
