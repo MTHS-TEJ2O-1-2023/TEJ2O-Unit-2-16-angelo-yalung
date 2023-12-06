@@ -17,16 +17,16 @@ while (true) {
     DigitalPin.P1,
     DigitalPin.P2,
     PingUnit.Centimeters
-    )
+  )
 
-    if (distanceToObject <= 10) {
-      radio.sendString('Too Close')
-    } else {
-      radio.sendString('Pee')
-    }
+  if (distanceToObject <= 10) {
+    radio.sendString('Too Close')
+  } else {
+    radio.sendString('Pee')
+  }
 
 radio.onReceivedString(function (receivedString) {
-    basic.clearScreen()
-    basic.showString(receivedString)
-})
+  basic.clearScreen()
+  basic.showString(receivedString)
+  })
 }
