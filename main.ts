@@ -13,7 +13,8 @@ radio.setGroup(76)
 basic.showIcon(IconNames.Happy)
 
 // constantly running
-while (true) {
+
+input.onButtonPressed(Button.A, function () {
   // finding the distance to the object
   distanceToObject = sonar.ping(
     DigitalPin.P1,
@@ -34,3 +35,4 @@ while (true) {
     basic.showString(receivedString)
   })
 }
+)
