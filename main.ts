@@ -28,6 +28,5 @@ while (true) {
 radio.onReceivedString(function (receivedString) {
     basic.clearScreen()
     basic.showString(receivedString)
-    basic.showIcon(IconNames.Happy)
 })
 }
